@@ -17,7 +17,7 @@ services:
   drupal:
     image: drupal:8-apache
     ports:
-      - 8080:80
+      - 8080
     volumes:
       - /var/www/html/modules
       - /var/www/html/profiles
