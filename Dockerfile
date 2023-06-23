@@ -11,8 +11,7 @@ RUN yum install --disableplugin=subscription-manager httpd -y && rm -rf /var/cac
 # Add default Web page and expose port
 RUN echo "The Web Server is Running" > /var/www/html/index.html
 # Get EPEL installed on the system
-RUN subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms
-RUN dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+RUN yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 # Install supporting software for Composer
 RUN yum install php-cli php-zip wget unzip
 
